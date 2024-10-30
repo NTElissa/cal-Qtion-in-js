@@ -66,8 +66,6 @@ Write a program that checks if an array reads the same forwards and backwards. P
 Exercise 20: Pattern Printing
 Write a program that uses a loop to print a pattern (for n = 5):
 
-markdown
-Copy code
 *
 **
 ***
