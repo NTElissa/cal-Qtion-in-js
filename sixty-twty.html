@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Beginner Exercises (16-21)</title>
+    <style>
+        /* New design styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd;
+            color: #424242;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #283593;
+            font-size: 1.3em;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 25px;
+            border-top: 5px solid #1a237e;
+        }
+
+        /* Input and Button styling */
+        input[type="text"], input[type="number"] {
+            padding: 10px;
+            width: calc(100% - 24px);
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #b0bec5;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #1a237e;
+        }
+
+        button {
+            padding: 10px 14px;
+            border: none;
+            background-color: #1e88e5;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        /* Result styling */
+        p {
+            margin: 10px 0 0;
+            font-weight: bold;
+            color: #424242;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Beginner Exercises (16-21)</h1>
+
+    <div class="container">
+        <!-- Question 16: Reverse each word in a sentence -->
+        <h2>16. Reverse Each Word in a Sentence</h2>
+        <input type="text" id="sentence16" placeholder="Enter a sentence">
+        <button onclick="reverseWords()">Reverse Words</button>
+        <p id="result16"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 17: Simple Calculator -->
+        <h2>17. Simple Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <input type="text" id="operator" placeholder="Enter operator (+, -, *, /)">
+        <button onclick="simpleCalculator()">Calculate</button>
+        <p id="result17"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 18: Find Second Largest Number in an Array -->
+        <h2>18. Find Second Largest Number in Array</h2>
+        <input type="text" id="array18" placeholder="Enter array (e.g., 5,3,8,6)">
+        <button onclick="findSecondLargest()">Find Second Largest</button>
+        <p id="result18"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 19: Check if Array is Palindromic -->
+        <h2>19. Check if Array is Palindromic</h2>
+        <input type="text" id="array19" placeholder="Enter array (e.g., 1,2,3,2,1)">
+        <button onclick="checkPalindrome()">Check Palindrome</button>
+        <p id="result19"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 20: Print Pattern -->
+        <h2>20. Print Pattern (for n = 5)</h2>
+        <button onclick="printPattern()">Print Pattern</button>
+        <pre id="result20"></pre>
+    </div>
+
+    <div class="container">
+        <!-- Question 21: Find Largest Odd Number in Array -->
+        <h2>21. Find Largest Odd Number in Array</h2>
+        <input type="text" id="array21" placeholder="Enter array (e.g., 4,7,2,9,5)">
+        <button onclick="findLargestOdd()">Find Largest Odd</button>
+        <p id="result21"></p>
+    </div>
+
+    <script>
+        // 16. Reverse Each Word in a Sentence
+        function reverseWords() {
+            let sentence = document.getElementById("sentence16").value;
+            let reversed = sentence.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+            document.getElementById("result16").textContent = "Reversed: " + reversed;
+        }
+
+        // 17. Simple Calculator
+        function simpleCalculator() {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let operator = document.getElementById("operator").value;
+            let result;
+
+            switch(operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
+                    break;
+                default:
+                    result = "Invalid operator";
+            }
+            document.getElementById("result17").textContent = "Result: " + result;
+        }
+
+        // 18. Find Second Largest Number in an Array
+        function findSecondLargest() {
+            let array = document.getElementById("array18").value.split(",").map(Number);
+            let uniqueArray = [...new Set(array)].sort((a, b) => b - a);
+            let result = uniqueArray.length > 1 ? uniqueArray[1] : "No second largest number";
+            document.getElementById("result18").textContent = "Second Largest: " + result;
+        }
+
+        // 19. Check if Array is Palindromic
+        function checkPalindrome() {
+            let array = document.getElementById("array19").value.split(",").map(Number);
+            let isPalindrome = array.join("") === array.slice().reverse().join("");
+            document.getElementById("result19").textContent = isPalindrome ? "Palindrome" : "Not a Palindrome";
+        }
+
+        // 20. Print Pattern (for n = 5)
+        function printPattern() {
+            let n = 5;
+            let pattern = "";
+            for (let i = 1; i <= n; i++) {
+                pattern += "*".repeat(i) + "\n";
+            }
+            document.getElementById("result20").textContent = pattern;
+        }
+
+        // 21. Find Largest Odd Number in Array
+        function findLargestOdd() {
+            let array = document.getElementById("array21").value.split(",").map(Number);
+            let largestOdd = array.filter(num => num % 2 !== 0).sort((a, b) => b - a)[0];
+            document.getElementById("result21").textContent = largestOdd ? "Largest Odd: " + largestOdd : "No odd numbers";
+        }
+    </script>
+</body>
+</html>

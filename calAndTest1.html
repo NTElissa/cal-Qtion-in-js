@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Beginner Exercises (6-10)</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Input styling */
+        input[type="number"],
+        input[type="text"] {
+            padding: 8px;
+            width: calc(100% - 18px);
+            margin-top: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Result styling */
+        p {
+            margin: 10px 0 0;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Beginner Exercises (6-10)</h1>
+
+    <div class="container">
+        <!-- Question 6: Prime Numbers from 1 to 50 -->
+        <h2>6. Print all Prime Numbers from 1 to 50</h2>
+        <button onclick="printPrimes()">Print Prime Numbers</button>
+        <p id="result6"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 7: Check if a value exists in an array -->
+        <h2>7. Check if a value exists in an array</h2>
+        <input type="text" id="array7" placeholder="Enter array (e.g., 1,2,3,4)">
+        <input type="number" id="value7" placeholder="Enter a value to check">
+        <button onclick="checkValueInArray()">Check Value</button>
+        <p id="result7"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 8: Count Positive, Negative, and Zero -->
+        <h2>8. Count Positive, Negative, and Zero in Array</h2>
+        <input type="text" id="array8" placeholder="Enter array (e.g., -1,2,0,-3)">
+        <button onclick="countPosNegZero()">Count</button>
+        <p id="result8"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 9: Calculate the Average of Numbers in an Array -->
+        <h2>9. Calculate Average of Numbers in Array</h2>
+        <input type="text" id="array9" placeholder="Enter array (e.g., 10,20,30)">
+        <button onclick="calculateAverage()">Calculate Average</button>
+        <p id="result9"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 10: Remove all occurrences of a specific value from an array -->
+        <h2>10. Remove all occurrences of a specific value from an array</h2>
+        <input type="text" id="array10" placeholder="Enter array (e.g., 1,2,3,3,4)">
+        <input type="number" id="value10" placeholder="Enter value to remove">
+        <button onclick="removeOccurrences()">Remove Value</button>
+        <p id="result10"></p>
+    </div>
+
+    <script>
+        // 6. Print all Prime Numbers from 1 to 50
+        function printPrimes() {
+            let primes = [];
+            for (let num = 2; num <= 50; num++) {
+                let isPrime = true;
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) primes.push(num);
+            }
+            document.getElementById("result6").textContent = "Primes: " + primes.join(", ");
+        }
+
+        // 7. Check if a value exists in an array
+        function checkValueInArray() {
+            let array = document.getElementById("array7").value.split(",").map(Number);
+            let value = parseInt(document.getElementById("value7").value);
+            let result = array.includes(value) ? "Found" : "Not Found";
+            document.getElementById("result7").textContent = result;
+        }
+
+        // 8. Count Positive, Negative, and Zero in Array
+        function countPosNegZero() {
+            let array = document.getElementById("array8").value.split(",").map(Number);
+            let positive = 0, negative = 0, zero = 0;
+            for (let num of array) {
+                if (num > 0) positive++;
+                else if (num < 0) negative++;
+                else zero++;
+            }
+            document.getElementById("result8").textContent = 
+                `Positive: ${positive}, Negative: ${negative}, Zero: ${zero}`;
+        }
+
+        // 9. Calculate the Average of Numbers in an Array
+        function calculateAverage() {
+            let array = document.getElementById("array9").value.split(",").map(Number);
+            let sum = 0;
+            for (let num of array) {
+                sum += num;
+            }
+            let average = array.length ? (sum / array.length) : 0;
+            document.getElementById("result9").textContent = "Average: " + average.toFixed(2);
+        }
+
+        // 10. Remove all occurrences of a specific value from an array
+        function removeOccurrences() {
+            let array = document.getElementById("array10").value.split(",").map(Number);
+            let value = parseInt(document.getElementById("value10").value);
+            let filteredArray = array.filter(num => num !== value);
+            document.getElementById("result10").textContent = "Modified Array: " + filteredArray.join(", ");
+        }
+    </script>
+</body>
+</html>

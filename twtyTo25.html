@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Beginner Exercises (22-25)</title>
+    <style>
+        /* Updated CSS for a new look */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3e5f5;
+            color: #4e342e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #6a1b9a;
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        h2 {
+            color: #8e24aa;
+            font-size: 1.4em;
+            margin: 10px 0 15px;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 30px;
+            border-left: 5px solid #8e24aa;
+            border-right: 5px solid #8e24aa;
+        }
+
+        /* Input and Button styling */
+        input[type="text"], input[type="number"] {
+            padding: 12px;
+            width: calc(100% - 24px);
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ba68c8;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #8e24aa;
+            box-shadow: 0 4px 10px rgba(142, 36, 170, 0.3);
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            background-color: #7b1fa2;
+            color: #ffffff;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #6a1b9a;
+        }
+
+        /* Result styling */
+        p {
+            margin: 10px 0 0;
+            font-weight: bold;
+            color: #4e342e;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Beginner Exercises (22-25)</h1>
+
+    <div class="container">
+        <!-- Question 22: Sum of Digits -->
+        <h2>22. Sum of Digits</h2>
+        <input type="number" id="number22" placeholder="Enter a positive integer">
+        <button onclick="sumOfDigits()">Calculate Sum of Digits</button>
+        <p id="result22"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 23: Remove Duplicates from Array -->
+        <h2>23. Remove Duplicates from Array</h2>
+        <input type="text" id="array23" placeholder="Enter array (e.g., 1,2,2,3,4,4)">
+        <button onclick="removeDuplicates()">Remove Duplicates</button>
+        <p id="result23"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 24: Word Count in a Sentence -->
+        <h2>24. Word Count in Sentence</h2>
+        <input type="text" id="sentence24" placeholder="Enter a sentence">
+        <button onclick="countWords()">Count Words</button>
+        <p id="result24"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 25: Multiplication Table -->
+        <h2>25. Multiplication Table</h2>
+        <input type="number" id="number25" placeholder="Enter a number">
+        <button onclick="multiplicationTable()">Show Multiplication Table</button>
+        <pre id="result25"></pre>
+    </div>
+
+    <script>
+        // 22. Sum of Digits
+        function sumOfDigits() {
+            let number = document.getElementById("number22").value;
+            let sum = number.split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+            document.getElementById("result22").textContent = "Sum of Digits: " + sum;
+        }
+
+        // 23. Remove Duplicates from Array
+        function removeDuplicates() {
+            let array = document.getElementById("array23").value.split(",").map(Number);
+            let uniqueArray = [...new Set(array)];
+            document.getElementById("result23").textContent = "Unique Array: " + uniqueArray.join(", ");
+        }
+
+        // 24. Word Count in a Sentence
+        function countWords() {
+            let sentence = document.getElementById("sentence24").value.trim();
+            let wordCount = sentence ? sentence.split(/\s+/).length : 0;
+            document.getElementById("result24").textContent = "Word Count: " + wordCount;
+        }
+
+        // 25. Multiplication Table
+        function multiplicationTable() {
+            let number = parseInt(document.getElementById("number25").value);
+            let result = "";
+            for (let i = 1; i <= 10; i++) {
+                result += `${number} * ${i} = ${number * i}\n`;
+            }
+            document.getElementById("result25").textContent = result;
+        }
+    </script>
+</body>
+</html>
