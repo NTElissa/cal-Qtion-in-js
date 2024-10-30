@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Beginner Exercises</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Input styling */
+        input[type="number"],
+        input[type="text"] {
+            padding: 8px;
+            width: calc(100% - 18px);
+            margin-top: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Result styling */
+        p {
+            margin: 10px 0 0;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Beginner Exercises</h1>
+
+    <div class="container">
+        <!-- Question 1: Odd or Even -->
+        <h2>1. Check if a number is Odd or Even</h2>
+        <input type="number" id="number1" placeholder="Enter a number">
+        <button onclick="checkOddEven()">Check Odd/Even</button>
+        <p id="result1"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 2: Sum of Array Elements -->
+        <h2>2. Sum of Array Elements</h2>
+        <input type="text" id="array2" placeholder="Enter numbers separated by commas">
+        <button onclick="sumArray()">Calculate Sum</button>
+        <p id="result2"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 3: Smallest Number in Array -->
+        <h2>3. Find the Smallest Number in Array</h2>
+        <input type="text" id="array3" placeholder="Enter numbers separated by commas">
+        <button onclick="findSmallest()">Find Smallest</button>
+        <p id="result3"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 4: Count Vowels in String -->
+        <h2>4. Count Vowels in a Sentence</h2>
+        <input type="text" id="sentence4" placeholder="Enter a sentence">
+        <button onclick="countVowels()">Count Vowels</button>
+        <p id="result4"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 5: Grade Feedback -->
+        <h2>5. Grade Feedback</h2>
+        <input type="text" id="grade5" placeholder="Enter a grade (A, B, C, D, F)">
+        <button onclick="gradeFeedback()">Get Feedback</button>
+        <p id="result5"></p>
+    </div>
+
+    <script>
+        // 1. Check if a number is Odd or Even
+        function checkOddEven() {
+            let number = parseInt(document.getElementById("number1").value);
+            let result = (number % 2 === 0) ? "Even" : "Odd";
+            document.getElementById("result1").textContent = "Result: " + result;
+        }
+
+        // 2. Sum of Array Elements
+        function sumArray() {
+            let array = document.getElementById("array2").value.split(",").map(Number);
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            document.getElementById("result2").textContent = "Sum: " + sum;
+        }
+
+        // 3. Find the Smallest Number in Array
+        function findSmallest() {
+            let array = document.getElementById("array3").value.split(",").map(Number);
+            let smallest = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] < smallest) {
+                    smallest = array[i];
+                }
+            }
+            document.getElementById("result3").textContent = "Smallest Number: " + smallest;
+        }
+
+        // 4. Count Vowels in a Sentence
+        function countVowels() {
+            let sentence = document.getElementById("sentence4").value.toLowerCase();
+            let count = 0;
+            for (let i = 0; i < sentence.length; i++) {
+                if ("aeiou".includes(sentence[i])) {
+                    count++;
+                }
+            }
+            document.getElementById("result4").textContent = "Vowel Count: " + count;
+        }
+
+        // 5. Grade Feedback
+        function gradeFeedback() {
+            let grade = document.getElementById("grade5").value.toUpperCase();
+            let feedback;
+            if (grade === "A") feedback = "Excellent";
+            else if (grade === "B") feedback = "Good";
+            else if (grade === "C") feedback = "Average";
+            else if (grade === "D") feedback = "Below Average";
+            else if (grade === "F") feedback = "Fail";
+            else feedback = "Invalid grade";
+            document.getElementById("result5").textContent = "Feedback: " + feedback;
+        }
+    </script>
+</body>
+</html>
