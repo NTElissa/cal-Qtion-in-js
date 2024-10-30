@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Beginner Exercises (11-15)</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #34495e;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            padding: 20px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        button {
+            padding: 8px 12px;
+            border: none;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Result styling */
+        p {
+            margin: 10px 0 0;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript Beginner Exercises (11-15)</h1>
+
+    <div class="container">
+        <!-- Question 11: Multiples of 3 from 1 to 30 -->
+        <h2>11. Print all multiples of 3 from 1 to 30</h2>
+        <button onclick="printMultiplesOf3()">Print Multiples of 3</button>
+        <p id="result11"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 12: Separate Even and Odd Numbers -->
+        <h2>12. Separate Even and Odd Numbers</h2>
+        <input type="text" id="array12" placeholder="Enter array (e.g., 1,2,3,4)">
+        <button onclick="separateEvenOdd()">Separate Even and Odd</button>
+        <p id="result12"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 13: Print Day of the Week -->
+        <h2>13. Print Day of the Week</h2>
+        <input type="number" id="day13" placeholder="Enter a number (1 to 7)">
+        <button onclick="printDayOfWeek()">Print Day</button>
+        <p id="result13"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 14: Find Common Elements Between Two Arrays -->
+        <h2>14. Find Common Elements Between Two Arrays</h2>
+        <input type="text" id="array14_1" placeholder="Enter first array (e.g., 1,2,3)">
+        <input type="text" id="array14_2" placeholder="Enter second array (e.g., 2,3,4)">
+        <button onclick="findCommonElements()">Find Common Elements</button>
+        <p id="result14"></p>
+    </div>
+
+    <div class="container">
+        <!-- Question 15: Count Occurrences of Each Element in Array -->
+        <h2>15. Count Occurrences of Each Element in Array</h2>
+        <input type="text" id="array15" placeholder="Enter array (e.g., 1,2,2,3,3,3)">
+        <button onclick="countOccurrences()">Count Occurrences</button>
+        <p id="result15"></p>
+    </div>
+
+    <script>
+        // 11. Print all multiples of 3 from 1 to 30
+        function printMultiplesOf3() {
+            let multiples = [];
+            for (let i = 3; i <= 30; i += 3) {
+                multiples.push(i);
+            }
+            document.getElementById("result11").textContent = "Multiples of 3: " + multiples.join(", ");
+        }
+
+        // 12. Separate Even and Odd Numbers
+        function separateEvenOdd() {
+            let array = document.getElementById("array12").value.split(",").map(Number);
+            let evenNumbers = array.filter(num => num % 2 === 0);
+            let oddNumbers = array.filter(num => num % 2 !== 0);
+            document.getElementById("result12").textContent = 
+                "Even: " + evenNumbers.join(", ") + " | Odd: " + oddNumbers.join(", ");
+        }
+
+        // 13. Print Day of the Week
+        function printDayOfWeek() {
+            let dayNumber = parseInt(document.getElementById("day13").value);
+            let daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let dayName = (dayNumber >= 1 && dayNumber <= 7) ? daysOfWeek[dayNumber - 1] : "Invalid day number";
+            document.getElementById("result13").textContent = "Day: " + dayName;
+        }
+
+        // 14. Find Common Elements Between Two Arrays
+        function findCommonElements() {
+            let array1 = document.getElementById("array14_1").value.split(",").map(Number);
+            let array2 = document.getElementById("array14_2").value.split(",").map(Number);
+            let commonElements = array1.filter(value => array2.includes(value));
+            document.getElementById("result14").textContent = "Common Elements: " + commonElements.join(", ");
+        }
+
+        // 15. Count Occurrences of Each Element in Array
+        function countOccurrences() {
+            let array = document.getElementById("array15").value.split(",").map(Number);
+            let counts = {};
+            array.forEach(num => counts[num] = (counts[num] || 0) + 1);
+            let result = Object.keys(counts).map(num => num + ": " + counts[num]).join(", ");
+            document.getElementById("result15").textContent = "Occurrences: " + result;
+        }
+    </script>
+</body>
+</html>
