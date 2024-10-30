@@ -1,32 +1,6 @@
 JavaScript Level 3 Exercises - SOD
 This repository contains JavaScript exercises aimed at improving skills through hands-on coding problems. Each exercise targets a fundamental concept, from control structures to array manipulation.
 
-Table of Contents
-Exercise 1: Odd or Even Checker
-Exercise 2: Sum of Array Elements
-Exercise 3: Smallest Number in Array
-Exercise 4: Vowel Counter in String
-Exercise 5: Letter Grade Feedback
-Exercise 6: Prime Numbers (1 to 50)
-Exercise 7: Value Finder in Array
-Exercise 8: Count Positives, Negatives, Zeros
-Exercise 9: Average of Array Elements
-Exercise 10: Remove Specific Value from Array
-Exercise 11: Multiples of 3 (1 to 30)
-Exercise 12: Separate Even and Odd Numbers
-Exercise 13: Day of the Week
-Exercise 14: Find Common Elements
-Exercise 15: Count Occurrences in Array
-Exercise 16: Reverse Words in a Sentence
-Exercise 17: Simple Calculator
-Exercise 18: Find Second Largest Number
-Exercise 19: Check Palindromic Array
-Exercise 20: Pattern Printing
-Exercise 21: Find Largest Odd Number
-Exercise 22: Sum of Digits
-Exercise 23: Remove Duplicates from Array
-Exercise 24: Word Count in Sentence
-Exercise 25: Multiplication Table
 Exercise 1: Odd or Even Checker
 Write a program that checks if a number is odd or even. Print "Odd" if the number is odd, and "Even" if it’s even.
 
