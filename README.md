@@ -48,7 +48,7 @@ Write a program that takes a number between 1 and 7 and prints the corresponding
 Exercise 14: Find Common Elements
 Write a program that finds all common elements between two arrays called array1 and array2, and prints these common elements.
 
-Exercise 15: Count Occurrences in Array
+Exercise 15: Count Occurrences in Array  
 Write a program that counts how many times each element appears in an array called items and prints each element and its count.
 
 Exercise 16: Reverse Words in a Sentence
