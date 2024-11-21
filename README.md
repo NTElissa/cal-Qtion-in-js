@@ -548,3 +548,348 @@ if (isPalindrome) {
   console.log("Not a Palindrome");
 }
 
+```
+Exercise 20: Pattern Printing 🖼️
+Description: Write a program that uses a loop to print a pattern of stars (*) for a given n.
+Input: A number n.
+Output: A pattern of *.
+
+```javascript
+
+// Beginner solution
+let n = 5; // Number of rows
+for (let i = 1; i <= n; i++) {
+  console.log("*".repeat(i)); // Repeat the "*" i times for each row
+}
+```
+Exercise 21: Find Largest Odd Number 🔍
+Description: Write a program that finds the largest odd number in an array called numbers.
+Input: An array of numbers.
+Output: The largest odd number. If no odd numbers are found, print "No odd numbers."
+
+```javascript
+
+// Beginner solution
+let numbers = [2, 8, 6, 7, 11, 14];
+let largestOdd = null;
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] % 2 !== 0 && (largestOdd === null || numbers[i] > largestOdd)) {
+    largestOdd = numbers[i]; // Update the largest odd number
+  }
+}
+
+if (largestOdd !== null) {
+  console.log("Largest Odd Number:", largestOdd);
+} else {
+  console.log("No odd numbers");
+}
+```
+Exercise 22: Sum of Digits ➕🔢
+Description: Write a program that calculates the sum of the digits of a positive integer.
+Input: A positive integer.
+Output: The sum of its digits.
+
+```javascript
+
+// Beginner solution
+let number = 12345; // Example input
+let sum = 0;
+
+while (number > 0) {
+  sum += number % 10; // Add the last digit to the sum
+  number = Math.floor(number / 10); // Remove the last digit
+}
+
+console.log("Sum of Digits:", sum);
+```
+Exercise 23: Remove Duplicates from Array 🚫🔁
+Description: Write a program that removes duplicate elements from an array called values and prints the resulting array with unique values only.
+Input: An array of numbers or strings.
+Output: An array with duplicates removed.
+
+```javascript
+
+// Beginner solution
+let values = [1, 2, 2, 3, 4, 4, 5];
+let uniqueValues = [];
+
+for (let i = 0; i < values.length; i++) {
+  if (!uniqueValues.includes(values[i])) {
+    uniqueValues.push(values[i]); // Add to uniqueValues if it's not already included
+  }
+}
+
+console.log("Unique Values:", uniqueValues);
+```
+Exercise 24: Word Count in Sentence ✍️
+Description: Write a program that counts the number of words in a given sentence.
+Input: A sentence as a string.
+Output: The total word count.
+
+```javascript
+
+// Beginner solution
+let sentence = "The quick brown fox jumps over the lazy dog";
+let words = sentence.split(" "); // Split the sentence into words
+console.log("Word Count:", words.length);
+```
+Exercise 25: Multiplication Table 📊
+Description: Write a program that prints the multiplication table of a given number up to 10.
+Input: A number.
+Output: Its multiplication table.
+
+``` javascript
+
+// Beginner solution
+let number = 5; // Example input
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`${number} x ${i} = ${number * i}`);
+}
+```
+Exercise 26: Fibonacci Sequence 🔢➕🔢
+Description: Write a program that prints the Fibonacci sequence up to a given number n.
+Input: A number n.
+Output: The Fibonacci sequence up to n terms.
+
+```javascript
+
+// Beginner solution
+let n = 10; // Example: Print 10 terms
+let a = 0, b = 1;
+
+console.log(a); // Print the first term
+if (n > 1) console.log(b); // Print the second term
+
+for (let i = 3; i <= n; i++) {
+  let next = a + b;
+  console.log(next); // Print the next term
+  a = b;
+  b = next;
+}
+```
+Exercise 27: Count Consonants in String 🔤
+Description: Write a program that counts the number of consonants in a given string.
+Input: A string.
+Output: The total consonant count.
+
+```javascript
+
+// Beginner solution
+let sentence = "Hello World";
+let consonants = sentence.match(/[bcdfghjklmnpqrstvwxyz]/gi) || []; // Match all consonants
+console.log("Consonant Count:", consonants.length);
+````
+Exercise 28: Merge and Sort Arrays 🔗📈
+Description: Write a program that merges two arrays and sorts the resulting array in ascending order.
+Input: Two arrays of numbers.
+Output: A single sorted array.
+
+```javascript
+
+// Beginner solution
+let array1 = [3, 1, 4];
+let array2 = [6, 2, 5];
+let mergedArray = array1.concat(array2).sort((a, b) => a - b); // Merge and sort
+
+console.log("Merged and Sorted Array:", mergedArray);
+```
+Exercise 29: Factorial Calculator ✖️
+Description: Write a program that calculates the factorial of a given number n.
+Input: A number n.
+Output: The factorial of n.
+
+```javascript
+
+// Beginner solution
+let n = 5; // Example input
+let factorial = 1;
+
+for (let i = 1; i <= n; i++) {
+  factorial *= i; // Multiply factorial by the current number
+}
+
+console.log("Factorial:", factorial);
+```
+Exercise 30: Check for Anagram 🔄
+Description: Write a program that checks if two strings are anagrams of each other.
+Input: Two strings.
+Output: "Anagram" if they are anagrams, otherwise "Not an Anagram."
+
+```javascript
+
+// Beginner solution
+let str1 = "listen";
+let str2 = "silent";
+
+let sortedStr1 = str1.split("").sort().join(""); // Sort the characters
+let sortedStr2 = str2.split("").sort().join("");
+
+if (sortedStr1 === sortedStr2) {
+  console.log("Anagram");
+} else {
+  console.log("Not an Anagram");
+}
+```
+
+Exercise 31: Replace Vowels in String ✏️
+Description: Write a program that replaces all vowels in a string with a specific character (e.g., *).
+Input: A string and a replacement character.
+Output: The modified string.
+
+```javascript
+
+// Beginner solution
+let sentence = "Hello World";
+let replacement = "*";
+let modifiedSentence = sentence.replace(/[aeiou]/gi, replacement); // Replace vowels with '*'
+
+console.log("Modified String:", modifiedSentence);
+```
+Exercise 32: Sort Array of Strings by Length 📏
+Description: Write a program that sorts an array of strings by their length in ascending order.
+Input: An array of strings.
+Output: The sorted array.
+
+```javascript
+
+// Beginner solution
+let strings = ["apple", "kiwi", "banana", "cherry"];
+strings.sort((a, b) => a.length - b.length); // Sort by length
+
+console.log("Sorted Strings:", strings);
+```
+Exercise 33: Generate Random Numbers 🎲
+Description: Write a program that generates n random numbers within a specified range (min to max).
+Input: The range and the number of random numbers to generate.
+Output: An array of random numbers.
+
+```javascript
+
+// Beginner solution
+let n = 5; // Number of random numbers
+let min = 10;
+let max = 50;
+let randomNumbers = [];
+
+for (let i = 0; i < n; i++) {
+  randomNumbers.push(Math.floor(Math.random() * (max - min + 1)) + min); // Generate random numbers
+}
+
+console.log("Random Numbers:", randomNumbers);
+````
+Exercise 34: Find Longest Word in Sentence 📜
+Description: Write a program that finds the longest word in a given sentence.
+Input: A sentence.
+Output: The longest word.
+
+```javascript
+
+// Beginner solution
+let sentence = "The quick brown fox jumps over the lazy dog";
+let words = sentence.split(" ");
+let longestWord = "";
+
+for (let word of words) {
+  if (word.length > longestWord.length) {
+    longestWord = word; // Update the longest word
+  }
+}
+
+console.log("Longest Word:", longestWord);
+````
+Exercise 35: Sum of Multiples ➕✖️
+Description: Write a program that calculates the sum of all multiples of a given number n up to a limit m.
+Input: Two numbers n and m.
+Output: The sum of multiples.
+
+```javascript
+// Beginner solution
+let n = 3; // Multiple
+let m = 10; // Limit
+let sum = 0;
+
+for (let i = n; i <= m; i += n) {
+  sum += i; // Add multiples of n
+}
+
+console.log("Sum of Multiples:", sum);
+```
+Exercise 36: Swap Two Variables 🔄
+Description: Write a program that swaps the values of two variables without using a third variable.
+Input: Two numbers.
+Output: The swapped values.
+
+```javascript
+// Beginner solution
+let a = 5;
+let b = 10;
+
+a = a + b;
+b = a - b;
+a = a - b;
+
+console.log("Swapped Values:", "a =", a, ", b =", b);
+```
+Exercise 37: Check for Substring 🔍
+Description: Write a program that checks if a given substring exists in a string.
+Input: A string and a substring.
+Output: "Found" if the substring exists, otherwise "Not Found."
+
+```javascript
+
+// Beginner solution
+let string = "Hello, welcome to JavaScript programming!";
+let substring = "JavaScript";
+
+if (string.includes(substring)) {
+  console.log("Found");
+} else {
+  console.log("Not Found");
+}
+```
+Exercise 38: Convert Celsius to Fahrenheit 🌡️
+Description: Write a program that converts a temperature from Celsius to Fahrenheit.
+Input: Temperature in Celsius.
+Output: Temperature in Fahrenheit.
+
+``` javascript
+// Beginner solution
+let celsius = 25; // Example input
+let fahrenheit = (celsius * 9) / 5 + 32; // Conversion formula
+
+console.log(`${celsius}°C is equal to ${fahrenheit}°F`);
+```
+Exercise 39: Remove All Non-Alphanumeric Characters 🚫
+Description: Write a program that removes all non-alphanumeric characters from a string.
+Input: A string.
+Output: A cleaned string with only alphanumeric characters.
+
+```javascript
+
+// Beginner solution
+let sentence = "Hello, World! Welcome to 2024.";
+let cleaned = sentence.replace(/[^a-z0-9]/gi, ""); // Remove non-alphanumeric characters
+
+console.log("Cleaned String:", cleaned);
+```
+Exercise 40: Power Calculator 🔋
+Description: Write a program that calculates the power of a number base raised to the exponent.
+Input: A base and an exponent.
+Output: The result.
+
+``` javascript
+
+// Beginner solution
+let base = 2;
+let exponent = 3;
+let result = 1;
+
+for (let i = 0; i < exponent; i++) {
+  result *= base; // Multiply base exponent times
+}
+
+console.log(`${base}^${exponent} = ${result}`);
+```
+🎉  🏁
