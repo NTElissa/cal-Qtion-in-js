@@ -336,27 +336,27 @@ for (let i = 0; i < numbers.length; i++) {
 
 console.log("Modified Array:", filteredArray);
 
-
+```
 Exercise 11: Multiples of 3 (1 to 30) 🔢
 Description: Write a program that prints all multiples of 3 from 1 to 30.
 Input: None.
 Output: Numbers that are multiples of 3.
 
-javascript
-Copy code
+``` javascript
 // Beginner solution
 for (let i = 1; i <= 30; i++) {
   if (i % 3 === 0) {
     console.log(i); // Print the number if it is a multiple of 3.
   }
 }
+```
 Exercise 12: Separate Even and Odd Numbers ➗
 Description: Write a program that separates even and odd numbers in an array and prints both groups in separate arrays.
 Input: An array of numbers.
 Output: Two arrays, one for even numbers and one for odd numbers.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 let evens = [];
@@ -371,14 +371,15 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log("Evens:", evens);
-console.log("Odds:", odds);
+console.log("Odds:", odds)
+```
 Exercise 13: Day of the Week 📅
 Description: Write a program that takes a number between 1 and 7 and prints the corresponding day of the week.
 Input: A number between 1 and 7.
 Output: The name of the day.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let dayNumber = 4; // Example input
 let day;
@@ -410,13 +411,14 @@ switch (dayNumber) {
 }
 
 console.log("Day:", day);
+```
 Exercise 14: Find Common Elements 🔗
 Description: Write a program that finds all common elements between two arrays called array1 and array2.
 Input: Two arrays of numbers.
 Output: An array of common elements.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let array1 = [1, 2, 3, 4, 5];
 let array2 = [3, 4, 5, 6, 7];
@@ -429,13 +431,14 @@ for (let i = 0; i < array1.length; i++) {
 }
 
 console.log("Common Elements:", commonElements);
+```
 Exercise 15: Count Occurrences in Array 📊
 Description: Write a program that counts how many times each element appears in an array called items.
 Input: An array of numbers or strings.
 Output: A count of each element.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let items = ["apple", "banana", "apple", "orange", "banana", "apple"];
 let counts = {};
@@ -450,13 +453,14 @@ for (let i = 0; i < items.length; i++) {
 }
 
 console.log("Counts:", counts);
+```
 Exercise 16: Reverse Words in a Sentence 🔄
 Description: Write a program that reverses each word in a given string called sentence.
 Input: A string.
 Output: The sentence with each word reversed.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let sentence = "Hello World";
 let words = sentence.split(" "); // Split the sentence into words.
@@ -469,13 +473,14 @@ for (let i = 0; i < words.length; i++) {
 
 let result = reversedWords.join(" "); // Join the reversed words back into a sentence.
 console.log("Reversed Sentence:", result);
+```
 Exercise 17: Simple Calculator ➕➖✖️➗
 Description: Write a simple calculator program that takes two numbers and an operation (+, -, *, /) and performs the operation.
 Input: Two numbers and an operation.
 Output: The result of the operation.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let num1 = 10;
 let num2 = 5;
@@ -495,13 +500,14 @@ if (operation === "+") {
 }
 
 console.log("Result:", result);
+```
 Exercise 18: Find Second Largest Number 🥈
 Description: Write a program that finds the second largest number in an array called numbers.
 Input: An array of numbers.
 Output: The second largest number.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let numbers = [10, 20, 5, 8, 30];
 let largest = -Infinity;
@@ -517,13 +523,14 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log("Second Largest Number:", secondLargest);
+```
 Exercise 19: Check Palindromic Array 🔁
 Description: Write a program that checks if an array reads the same forwards and backwards.
 Input: An array of numbers or strings.
 Output: "Palindrome" if it is, otherwise "Not a Palindrome".
 
-javascript
-Copy code
+``` javascript
+
 // Beginner solution
 let array = [1, 2, 3, 2, 1];
 let isPalindrome = true;
@@ -540,4 +547,4 @@ if (isPalindrome) {
 } else {
   console.log("Not a Palindrome");
 }
-🎉 Stay tuned for more exercises! 🚀💻
+
