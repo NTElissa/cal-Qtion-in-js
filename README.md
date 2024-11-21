@@ -101,19 +101,9 @@ switch (grade) {
 
 
 
+```
 
 
-You said:
-no i say put all answer in the same file where qtion one answer is  , answer like biggner develop 
-ChatGPT said:
-ChatGPT
-Here’s the updated README file, where all questions and answers are written in a beginner-friendly style and included in the same file:
-
-markdown
-Copy code
-# 🌟 JavaScript Level 3 Exercises
-
-This repository contains a set of **JavaScript exercises** designed to enhance your skills through hands-on coding problems. Each exercise targets a fundamental concept, ranging from basic control structures to more advanced array manipulations and algorithm-based challenges.
 
 ---
 
@@ -147,13 +137,14 @@ if (number % 2 === 0) {
 } else {
   console.log("Odd"); // Otherwise, it's odd.
 }
+```
 Exercise 2: Sum of Array Elements ➕
 Description: Write a program that calculates the sum of all elements in an array called numbers.
 Input: An array of numbers.
 Output: The total sum.
 
-javascript
-Copy code
+``` javascript
+
 // Beginner solution
 let numbers = [10, 20, 30, 40];
 let sum = 0;
@@ -163,13 +154,14 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log("Sum:", sum); // Print the total sum.
+```
 Exercise 3: Smallest Number in Array 🔎
 Description: Write a program that finds and prints the smallest number in an array called values.
 Input: An array of numbers.
 Output: The smallest number.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let values = [5, 2, 9, 1, 6];
 let smallest = values[0]; // Assume the first number is the smallest.
@@ -181,13 +173,14 @@ for (let i = 1; i < values.length; i++) {
 }
 
 console.log("Smallest Number:", smallest);
+```
 Exercise 4: Vowel Counter in String 🅰️
 Description: Write a program that counts the number of vowels in a given string called sentence.
 Input: A string.
 Output: The total number of vowels.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let sentence = "Hello World";
 let count = 0;
@@ -200,6 +193,7 @@ for (let i = 0; i < sentence.length; i++) {
 }
 
 console.log("Vowel Count:", count);
+```
 Exercise 5: Letter Grade Feedback 🎓
 Description: Write a program that takes a letter grade (like "A", "B", "C", etc.) and prints feedback.
 Input: A grade.
@@ -210,8 +204,8 @@ Output: Feedback as follows:
 "C" → "Average"
 "D" → "Below Average"
 "F" → "Fail"
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let grade = "B";
 
@@ -228,13 +222,14 @@ if (grade === "A") {
 } else {
   console.log("Invalid Grade"); // Handle unexpected input.
 }
+```
 Exercise 6: Prime Numbers (1 to 50) 🧮
 Description: Write a program that prints all prime numbers between 1 and 50.
 Input: None.
 Output: A list of prime numbers.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 for (let num = 2; num <= 50; num++) {
   let isPrime = true;
@@ -250,13 +245,14 @@ for (let num = 2; num <= 50; num++) {
     console.log(num); // Print the prime number.
   }
 }
+```
 Exercise 7: Value Finder in Array 🔍
 Description: Write a program that checks if a specific value exists in an array.
 Input: An array and a value to search.
 Output: "Found" if the value exists, otherwise "Not Found".
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let arr = [1, 2, 3, 4, 5];
 let value = 3;
@@ -274,13 +270,14 @@ if (found) {
 } else {
   console.log("Not Found");
 }
+```
 Exercise 8: Count Positives, Negatives, Zeros ➕➖0️⃣
 Description: Write a program that counts how many numbers in an array are positive, negative, or zero.
 Input: An array of numbers.
 Output: Counts for each category.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let numbers = [1, -2, 0, 3, -4, 5, 0];
 let positives = 0;
@@ -300,13 +297,14 @@ for (let i = 0; i < numbers.length; i++) {
 console.log("Positives:", positives);
 console.log("Negatives:", negatives);
 console.log("Zeros:", zeros);
+```
 Exercise 9: Average of Array Elements 📊
 Description: Write a program that computes the average of all numbers in an array called scores.
 Input: An array of numbers.
 Output: The average.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let scores = [90, 80, 70, 100];
 let total = 0;
@@ -317,13 +315,14 @@ for (let i = 0; i < scores.length; i++) {
 
 let average = total / scores.length; // Divide total by the number of scores.
 console.log("Average:", average);
+```
 Exercise 10: Remove Specific Value from Array 🗑️
 Description: Write a program to remove all occurrences of a specific value from an array called numbers.
 Input: An array and a value to remove.
 Output: The modified array.
 
-javascript
-Copy code
+```javascript
+
 // Beginner solution
 let numbers = [1, 2, 3, 2, 4, 2, 5];
 let valueToRemove = 2;
@@ -336,19 +335,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 
 console.log("Modified Array:", filteredArray);
-🎉 Keep practicing, and happy coding! 💻🚀
 
-Copy code
-
-
-
-
-
-You said:
-continue
-ChatGPT said:
-ChatGPT
-Here’s the continuation with the next set of exercises, written in the same beginner-friendly style:
 
 Exercise 11: Multiples of 3 (1 to 30) 🔢
 Description: Write a program that prints all multiples of 3 from 1 to 30.
