@@ -129,7 +129,7 @@ switch (grade) {
 **Output**: "Odd" if the number is odd, and "Even" if the number is even.
 
 ```javascript
-// Beginner solution
+
 let number = 7;
 
 if (number % 2 === 0) {
@@ -145,7 +145,6 @@ Output: The total sum.
 
 ``` javascript
 
-// Beginner solution
 let numbers = [10, 20, 30, 40];
 let sum = 0;
 
@@ -162,7 +161,7 @@ Output: The smallest number.
 
 ```javascript
 
-// Beginner solution
+
 let values = [5, 2, 9, 1, 6];
 let smallest = values[0]; // Assume the first number is the smallest.
 
@@ -181,7 +180,6 @@ Output: The total number of vowels.
 
 ```javascript
 
-// Beginner solution
 let sentence = "Hello World";
 let count = 0;
 let vowels = "aeiouAEIOU"; // List of vowels.
@@ -206,7 +204,7 @@ Output: Feedback as follows:
 "F" → "Fail"
 ```javascript
 
-// Beginner solution
+
 let grade = "B";
 
 if (grade === "A") {
@@ -230,7 +228,6 @@ Output: A list of prime numbers.
 
 ```javascript
 
-// Beginner solution
 for (let num = 2; num <= 50; num++) {
   let isPrime = true;
 
@@ -253,7 +250,6 @@ Output: "Found" if the value exists, otherwise "Not Found".
 
 ```javascript
 
-// Beginner solution
 let arr = [1, 2, 3, 4, 5];
 let value = 3;
 let found = false;
@@ -278,7 +274,6 @@ Output: Counts for each category.
 
 ```javascript
 
-// Beginner solution
 let numbers = [1, -2, 0, 3, -4, 5, 0];
 let positives = 0;
 let negatives = 0;
@@ -305,7 +300,6 @@ Output: The average.
 
 ```javascript
 
-// Beginner solution
 let scores = [90, 80, 70, 100];
 let total = 0;
 
@@ -323,7 +317,6 @@ Output: The modified array.
 
 ```javascript
 
-// Beginner solution
 let numbers = [1, 2, 3, 2, 4, 2, 5];
 let valueToRemove = 2;
 let filteredArray = [];
@@ -343,7 +336,7 @@ Input: None.
 Output: Numbers that are multiples of 3.
 
 ``` javascript
-// Beginner solution
+
 for (let i = 1; i <= 30; i++) {
   if (i % 3 === 0) {
     console.log(i); // Print the number if it is a multiple of 3.
@@ -357,7 +350,6 @@ Output: Two arrays, one for even numbers and one for odd numbers.
 
 ```javascript
 
-// Beginner solution
 let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 let evens = [];
 let odds = [];
@@ -380,7 +372,6 @@ Output: The name of the day.
 
 ```javascript
 
-// Beginner solution
 let dayNumber = 4; // Example input
 let day;
 
@@ -419,7 +410,7 @@ Output: An array of common elements.
 
 ```javascript
 
-// Beginner solution
+
 let array1 = [1, 2, 3, 4, 5];
 let array2 = [3, 4, 5, 6, 7];
 let commonElements = [];
@@ -439,7 +430,7 @@ Output: A count of each element.
 
 ```javascript
 
-// Beginner solution
+
 let items = ["apple", "banana", "apple", "orange", "banana", "apple"];
 let counts = {};
 
@@ -461,7 +452,6 @@ Output: The sentence with each word reversed.
 
 ```javascript
 
-// Beginner solution
 let sentence = "Hello World";
 let words = sentence.split(" "); // Split the sentence into words.
 let reversedWords = [];
@@ -481,7 +471,7 @@ Output: The result of the operation.
 
 ```javascript
 
-// Beginner solution
+
 let num1 = 10;
 let num2 = 5;
 let operation = "+"; // Choose from "+", "-", "*", or "/".
@@ -508,7 +498,7 @@ Output: The second largest number.
 
 ```javascript
 
-// Beginner solution
+
 let numbers = [10, 20, 5, 8, 30];
 let largest = -Infinity;
 let secondLargest = -Infinity;
@@ -531,7 +521,6 @@ Output: "Palindrome" if it is, otherwise "Not a Palindrome".
 
 ``` javascript
 
-// Beginner solution
 let array = [1, 2, 3, 2, 1];
 let isPalindrome = true;
 
@@ -556,7 +545,7 @@ Output: A pattern of *.
 
 ```javascript
 
-// Beginner solution
+
 let n = 5; // Number of rows
 for (let i = 1; i <= n; i++) {
   console.log("*".repeat(i)); // Repeat the "*" i times for each row
@@ -569,7 +558,7 @@ Output: The largest odd number. If no odd numbers are found, print "No odd numbe
 
 ```javascript
 
-// Beginner solution
+
 let numbers = [2, 8, 6, 7, 11, 14];
 let largestOdd = null;
 
@@ -592,7 +581,7 @@ Output: The sum of its digits.
 
 ```javascript
 
-// Beginner solution
+
 let number = 12345; // Example input
 let sum = 0;
 
@@ -610,7 +599,6 @@ Output: An array with duplicates removed.
 
 ```javascript
 
-// Beginner solution
 let values = [1, 2, 2, 3, 4, 4, 5];
 let uniqueValues = [];
 
@@ -629,7 +617,7 @@ Output: The total word count.
 
 ```javascript
 
-// Beginner solution
+
 let sentence = "The quick brown fox jumps over the lazy dog";
 let words = sentence.split(" "); // Split the sentence into words
 console.log("Word Count:", words.length);
@@ -641,7 +629,6 @@ Output: Its multiplication table.
 
 ``` javascript
 
-// Beginner solution
 let number = 5; // Example input
 
 for (let i = 1; i <= 10; i++) {
@@ -655,7 +642,6 @@ Output: The Fibonacci sequence up to n terms.
 
 ```javascript
 
-// Beginner solution
 let n = 10; // Example: Print 10 terms
 let a = 0, b = 1;
 
@@ -676,7 +662,6 @@ Output: The total consonant count.
 
 ```javascript
 
-// Beginner solution
 let sentence = "Hello World";
 let consonants = sentence.match(/[bcdfghjklmnpqrstvwxyz]/gi) || []; // Match all consonants
 console.log("Consonant Count:", consonants.length);
@@ -688,7 +673,7 @@ Output: A single sorted array.
 
 ```javascript
 
-// Beginner solution
+
 let array1 = [3, 1, 4];
 let array2 = [6, 2, 5];
 let mergedArray = array1.concat(array2).sort((a, b) => a - b); // Merge and sort
@@ -702,7 +687,7 @@ Output: The factorial of n.
 
 ```javascript
 
-// Beginner solution
+
 let n = 5; // Example input
 let factorial = 1;
 
@@ -719,7 +704,6 @@ Output: "Anagram" if they are anagrams, otherwise "Not an Anagram."
 
 ```javascript
 
-// Beginner solution
 let str1 = "listen";
 let str2 = "silent";
 
@@ -740,7 +724,7 @@ Output: The modified string.
 
 ```javascript
 
-// Beginner solution
+
 let sentence = "Hello World";
 let replacement = "*";
 let modifiedSentence = sentence.replace(/[aeiou]/gi, replacement); // Replace vowels with '*'
@@ -754,7 +738,6 @@ Output: The sorted array.
 
 ```javascript
 
-// Beginner solution
 let strings = ["apple", "kiwi", "banana", "cherry"];
 strings.sort((a, b) => a.length - b.length); // Sort by length
 
@@ -767,7 +750,6 @@ Output: An array of random numbers.
 
 ```javascript
 
-// Beginner solution
 let n = 5; // Number of random numbers
 let min = 10;
 let max = 50;
@@ -786,7 +768,6 @@ Output: The longest word.
 
 ```javascript
 
-// Beginner solution
 let sentence = "The quick brown fox jumps over the lazy dog";
 let words = sentence.split(" ");
 let longestWord = "";
@@ -805,7 +786,7 @@ Input: Two numbers n and m.
 Output: The sum of multiples.
 
 ```javascript
-// Beginner solution
+
 let n = 3; // Multiple
 let m = 10; // Limit
 let sum = 0;
@@ -822,7 +803,7 @@ Input: Two numbers.
 Output: The swapped values.
 
 ```javascript
-// Beginner solution
+
 let a = 5;
 let b = 10;
 
@@ -839,7 +820,6 @@ Output: "Found" if the substring exists, otherwise "Not Found."
 
 ```javascript
 
-// Beginner solution
 let string = "Hello, welcome to JavaScript programming!";
 let substring = "JavaScript";
 
@@ -855,7 +835,7 @@ Input: Temperature in Celsius.
 Output: Temperature in Fahrenheit.
 
 ``` javascript
-// Beginner solution
+
 let celsius = 25; // Example input
 let fahrenheit = (celsius * 9) / 5 + 32; // Conversion formula
 
@@ -868,7 +848,6 @@ Output: A cleaned string with only alphanumeric characters.
 
 ```javascript
 
-// Beginner solution
 let sentence = "Hello, World! Welcome to 2024.";
 let cleaned = sentence.replace(/[^a-z0-9]/gi, ""); // Remove non-alphanumeric characters
 
@@ -881,7 +860,6 @@ Output: The result.
 
 ``` javascript
 
-// Beginner solution
 let base = 2;
 let exponent = 3;
 let result = 1;
