@@ -45,36 +45,39 @@ if (number % 2 === 0) {
 } else {
   console.log("Odd");
 }
+``` 
 Exercise 2: Sum of Array Elements ➕
 Description: Write a program that calculates the sum of all elements in an array called numbers.
 Input: An array of numbers.
 Output: The total sum.
 
-javascript
-Copy code
+```javascript
+
 let numbers = [10, 20, 30, 40];
 let sum = numbers.reduce((acc, val) => acc + val, 0);
 console.log("Sum:", sum);
+```
 Exercise 3: Smallest Number in Array 🔎
 Description: Write a program that finds and prints the smallest number in an array called values.
 Input: An array of numbers.
 Output: The smallest number.
 
-javascript
-Copy code
+``` javascript
 let values = [5, 2, 9, 1, 6];
 let smallest = Math.min(...values);
 console.log("Smallest Number:", smallest);
+```
 Exercise 4: Vowel Counter in String 🅰️
 Description: Write a program that counts the number of vowels in a given string called sentence.
 Input: A string.
 Output: The total number of vowels.
 
-javascript
-Copy code
+```javascript
+
 let sentence = "Hello World";
 let vowels = sentence.match(/[aeiou]/gi) || [];
 console.log("Vowel Count:", vowels.length);
+```
 Exercise 5: Letter Grade Feedback 🎓
 Description: Write a program that takes a letter grade (like "A", "B", "C", etc.) and prints feedback.
 Input: A grade.
@@ -85,8 +88,9 @@ Output: Feedback as follows:
 "C" → "Average"
 "D" → "Below Average"
 "F" → "Fail"
-javascript
-Copy code
+
+``` javascript
+
 let grade = "B";
 switch (grade) {
   case "A":
