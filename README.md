@@ -1,101 +1,57 @@
-JavaScript Level 3 Exercises - SOD
-This repository contains JavaScript exercises aimed at improving skills through hands-on coding problems. Each exercise targets a fundamental concept, from control structures to array manipulation.
+# JavaScript Level 3 Exercises
 
-Exercise 1: Odd or Even Checker
-Write a program that checks if a number is odd or even. Print "Odd" if the number is odd, and "Even" if it’s even.
+This repository contains a set of **JavaScript exercises** designed to enhance your skills through hands-on coding problems. Each exercise targets a fundamental concept, ranging from basic control structures to more advanced array manipulations and algorithm-based challenges.
 
-Exercise 2: Sum of Array Elements
-Write a program that calculates the sum of all elements in an array called numbers. Print the final sum.
+## Table of Contents
 
-Exercise 3: Smallest Number in Array
-Write a program that finds and prints the smallest number in an array called values.
+1. [Odd or Even Checker](#exercise-1-odd-or-even-checker)
+2. [Sum of Array Elements](#exercise-2-sum-of-array-elements)
+3. [Smallest Number in Array](#exercise-3-smallest-number-in-array)
+4. [Vowel Counter in String](#exercise-4-vowel-counter-in-string)
+5. [Letter Grade Feedback](#exercise-5-letter-grade-feedback)
+6. [Prime Numbers (1 to 50)](#exercise-6-prime-numbers-1-to-50)
+7. [Value Finder in Array](#exercise-7-value-finder-in-array)
+8. [Count Positives, Negatives, Zeros](#exercise-8-count-positives-negatives-zeros)
+9. [Average of Array Elements](#exercise-9-average-of-array-elements)
+10. [Remove Specific Value from Array](#exercise-10-remove-specific-value-from-array)
+11. [Multiples of 3 (1 to 30)](#exercise-11-multiples-of-3-1-to-30)
+12. [Separate Even and Odd Numbers](#exercise-12-separate-even-and-odd-numbers)
+13. [Day of the Week](#exercise-13-day-of-the-week)
+14. [Find Common Elements](#exercise-14-find-common-elements)
+15. [Count Occurrences in Array](#exercise-15-count-occurrences-in-array)
+16. [Reverse Words in a Sentence](#exercise-16-reverse-words-in-a-sentence)
+17. [Simple Calculator](#exercise-17-simple-calculator)
+18. [Find Second Largest Number](#exercise-18-find-second-largest-number)
+19. [Check Palindromic Array](#exercise-19-check-palindromic-array)
+20. [Pattern Printing](#exercise-20-pattern-printing)
+21. [Find Largest Odd Number](#exercise-21-find-largest-odd-number)
+22. [Sum of Digits](#exercise-22-sum-of-digits)
+23. [Remove Duplicates from Array](#exercise-23-remove-duplicates-from-array)
+24. [Word Count in Sentence](#exercise-24-word-count-in-sentence)
+25. [Multiplication Table](#exercise-25-multiplication-table)
+26. [Fibonacci Sequence](#exercise-26-fibonacci-sequence)
+27. [Count Consonants in String](#exercise-27-count-consonants-in-string)
+28. [Merge and Sort Arrays](#exercise-28-merge-and-sort-arrays)
+29. [Factorial Calculator](#exercise-29-factorial-calculator)
+30. [Check for Anagram](#exercise-30-check-for-anagram)
+31. [Replace Vowels in String](#exercise-31-replace-vowels-in-string)
+32. [Sort Array of Strings by Length](#exercise-32-sort-array-of-strings-by-length)
+33. [Generate Random Numbers](#exercise-33-generate-random-numbers)
+34. [Find Longest Word in Sentence](#exercise-34-find-longest-word-in-sentence)
+35. [Sum of Multiples](#exercise-35-sum-of-multiples)
+36. [Swap Two Variables](#exercise-36-swap-two-variables)
+37. [Check for Substring](#exercise-37-check-for-substring)
+38. [Convert Celsius to Fahrenheit](#exercise-38-convert-celsius-to-fahrenheit)
+39. [Remove All Non-Alphanumeric Characters](#exercise-39-remove-all-non-alphanumeric-characters)
+40. [Power Calculator](#exercise-40-power-calculator)
 
-Exercise 4: Vowel Counter in String
-Write a program that counts the number of vowels in a given string called sentence and prints the total count.
+## Exercise 1: Odd or Even Checker
+**Description**: Write a program that checks if a number is odd or even. Print "Odd" if the number is odd, and "Even" if it’s even.
 
-Exercise 5: Letter Grade Feedback
-Write a program that takes a letter grade (like "A", "B", "C", etc.) and prints feedback as follows:
-
-"A" -> "Excellent"
-"B" -> "Good"
-"C" -> "Average"
-"D" -> "Below Average"
-"F" -> "Fail"
-Exercise 6: Prime Numbers (1 to 50)
-Write a program that prints all prime numbers between 1 and 50.
-
-Exercise 7: Value Finder in Array
-Write a program that checks if a specific value exists in an array. Print "Found" if it exists, otherwise print "Not Found".
-
-Exercise 8: Count Positives, Negatives, Zeros
-Write a program that counts how many numbers in an array are positive, negative, or zero. Print the counts for each category.
-
-Exercise 9: Average of Array Elements
-Write a program that calculates the average of all numbers in an array called scores and prints the result.
-
-Exercise 10: Remove Specific Value from Array
-Write a program that removes all occurrences of a specific value from an array called numbers and prints the modified array.
-
-Exercise 11: Multiples of 3 (1 to 30)
-Write a program that uses a loop to print all multiples of 3 from 1 to 30.
-
-Exercise 12: Separate Even and Odd Numbers
-Write a program that separates even and odd numbers in an array and prints both groups in separate arrays.
-
-Exercise 13: Day of the Week
-Write a program that takes a number between 1 and 7 and prints the corresponding day of the week.
-
-Exercise 14: Find Common Elements
-Write a program that finds all common elements between two arrays called array1 and array2, and prints these common elements.
-
-Exercise 15: Count Occurrences in Array
-Write a program that counts how many times each element appears in an array called items and prints each element and its count.
-
-Exercise 16: Reverse Words in a Sentence
-Write a program that reverses each word in a given string called sentence and prints the result.
-
-Exercise 17: Simple Calculator
-Write a simple calculator program that takes two numbers and an operation (+, -, *, /) and performs the operation.
-
-Exercise 18: Find Second Largest Number
-Write a program that finds the second largest number in an array called numbers.
-
-Exercise 19: Check Palindromic Array
-Write a program that checks if an array reads the same forwards and backwards. Print "Palindrome" if it is, otherwise print "Not a Palindrome".
-
-Exercise 20: Pattern Printing
-Write a program that uses a loop to print a pattern (for n = 5):
-
-                                    *
-                                    **
-                                    ***
-                                    ****
-                                    *****
-Exercise 21: Find Largest Odd Number
-Write a program that finds the largest odd number in an array called numbers. Print the result. If no odd numbers are found, print "No odd numbers".
-
-Exercise 22: Sum of Digits
-Write a program that calculates the sum of the digits of a positive integer.
-
-Exercise 23: Remove Duplicates from Array
-Write a program that removes duplicate elements from an array called values and prints the resulting array with unique values only.
-
-Exercise 24: Word Count in Sentence
-Write a program that counts the number of words in a given sentence and prints the total word count.
-
-Exercise 25: Multiplication Table
-Write a program that prints the multiplication table of a given number up to 10.
-
-Getting Started
-To get started with these exercises:
-
-Clone this repository.
-Open each exercise in your preferred code editor.
-Run the exercises in a JavaScript environment, such as a browser console or an online JS editor.
-Contributing
-Feel free to contribute solutions or improvements to these exercises. Fork the repository, make your changes, and submit a pull request.
-
-License
-This project is open-source and available under the MIT License.
-
-https://www.instagram.com/p/DBv5OKwTC-6/?utm_source=ig_web_copy_link
+```javascript
+let number = 7;
+if (number % 2 === 0) {
+  console.log("Even");
+} else {
+  console.log("Odd");
+}
