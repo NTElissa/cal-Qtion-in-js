@@ -1,4 +1,4 @@
-# 🌟 JavaScript Level 3 Exercises
+# 🌟 JavaScript Exercises
 
 This repository contains a set of **JavaScript exercises** designed to enhance your skills through hands-on coding problems. Each exercise targets a fundamental concept, ranging from basic control structures to more advanced array manipulations and algorithm-based challenges.
 
