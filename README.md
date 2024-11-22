@@ -1017,6 +1017,29 @@ console.log(isPrime ? "Prime" : "Not Prime");
 
 
 ```
+
+Exercise 50: Check if a Number is Prime 🔢
+Description: Write a program that checks if a number is prime.
+Input: A number.
+Output: "Prime" if the number is prime, otherwise "Not Prime."
+
+``` javascript
+let num = 7;
+let isPrime = true;
+
+if (num < 2) {
+  isPrime = false;
+} else {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+}
+
+console.log(isPrime ? "Prime" : "Not Prime");
+```
 Exercise 51: Implement Binary Search 🧐
 Description: Write a program that implements the binary search algorithm to find an element in a sorted array.
 Input: A sorted array and a target element.
