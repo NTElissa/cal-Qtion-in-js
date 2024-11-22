@@ -869,5 +869,675 @@ for (let i = 0; i < exponent; i++) {
 }
 
 console.log(`${base}^${exponent} = ${result}`);
+
 ```
+
+Exercise 41: Check for Palindrome 🪞
+Description: Write a program that checks if a given string is a palindrome (reads the same forward and backward).
+Input: A string.
+Output: "Palindrome" if the string is a palindrome, otherwise "Not Palindrome."
+
+javascript
+Copy code
+let str = "racecar";
+let reversedStr = str.split("").reverse().join("");
+
+if (str === reversedStr) {
+  console.log("Palindrome");
+} else {
+  console.log("Not Palindrome");
+}
+Exercise 42: Reverse a Number 🔄
+Description: Write a program that reverses the digits of a given number.
+Input: A number.
+Output: The reversed number.
+
+javascript
+Copy code
+let num = 12345;
+let reversedNum = num.toString().split("").reverse().join("");
+console.log("Reversed Number:", reversedNum);
+Exercise 43: Find Factorial of a Number 🎯
+Description: Write a program that calculates the factorial of a given number.
+Input: A positive integer n.
+Output: The factorial of n.
+
+javascript
+Copy code
+let n = 5;
+let factorial = 1;
+
+for (let i = 1; i <= n; i++) {
+  factorial *= i;
+}
+
+console.log("Factorial:", factorial);
+Exercise 44: Find Maximum in Array 🌟
+Description: Write a program that finds the maximum number in an array of numbers.
+Input: An array of numbers.
+Output: The maximum number.
+
+javascript
+Copy code
+let numbers = [3, 5, 7, 2, 8];
+let max = Math.max(...numbers);
+console.log("Maximum Number:", max);
+Exercise 45: Remove First Occurrence of Element in Array ❌
+Description: Write a program that removes the first occurrence of a specified element from an array.
+Input: An array and an element to remove.
+Output: The array with the first occurrence of the element removed.
+
+javascript
+Copy code
+let arr = [1, 2, 3, 4, 5, 2];
+let element = 2;
+let index = arr.indexOf(element);
+
+if (index !== -1) {
+  arr.splice(index, 1);
+}
+
+console.log("Updated Array:", arr);
+Exercise 46: Merge Two Arrays 🧩
+Description: Write a program that merges two arrays into a single array.
+Input: Two arrays.
+Output: A merged array.
+
+javascript
+Copy code
+let array1 = [1, 2, 3];
+let array2 = [4, 5, 6];
+let mergedArray = array1.concat(array2);
+
+console.log("Merged Array:", mergedArray);
+Exercise 47: Count the Number of Digits in a Number 🔢
+Description: Write a program that counts how many digits are in a given number.
+Input: A number.
+Output: The number of digits in the number.
+
+javascript
+Copy code
+let num = 12345;
+let digitCount = num.toString().length;
+
+console.log("Number of Digits:", digitCount);
+Exercise 48: Calculate Power of a Number (Exponentiation) 💡
+Description: Write a program that calculates the power of a number base raised to the exponent exp.
+Input: A base and an exponent.
+Output: The result of base^exp.
+
+javascript
+Copy code
+let base = 2;
+let exp = 3;
+let result = Math.pow(base, exp);
+
+console.log("Result:", result);
+Exercise 49: Find Second Smallest Number in Array 🔍
+Description: Write a program that finds the second smallest number in an array.
+Input: An array of numbers.
+Output: The second smallest number.
+
+javascript
+Copy code
+let numbers = [5, 3, 9, 2, 8];
+numbers.sort((a, b) => a - b); // Sort array in ascending order
+let secondSmallest = numbers[1]; // Second smallest number
+
+console.log("Second Smallest Number:", secondSmallest);
+Exercise 50: Check if a Number is Prime 🔢
+Description: Write a program that checks if a number is prime.
+Input: A number.
+Output: "Prime" if the number is prime, otherwise "Not Prime."
+
+javascript
+Copy code
+let num = 7;
+let isPrime = true;
+
+if (num < 2) {
+  isPrime = false;
+} else {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+}
+
+console.log(isPrime ? "Prime" : "Not Prime");
+
+
+
+
+Exercise 51: Implement Binary Search 🧐
+Description: Write a program that implements the binary search algorithm to find an element in a sorted array.
+Input: A sorted array and a target element.
+Output: The index of the element if found, otherwise -1.
+
+javascript
+Copy code
+function binarySearch(arr, target) {
+  let low = 0;
+  let high = arr.length - 1;
+
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+    
+    if (arr[mid] === target) {
+      return mid;
+    } else if (arr[mid] < target) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+  
+  return -1;
+}
+
+let sortedArray = [1, 3, 5, 7, 9, 11, 13];
+let target = 7;
+console.log(binarySearch(sortedArray, target)); // Output: 3
+Exercise 52: Merge Sort Algorithm 🧩
+Description: Write a program that implements the merge sort algorithm to sort an array of numbers.
+Input: An unsorted array of numbers.
+Output: A sorted array.
+
+javascript
+Copy code
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+  
+  const middle = Math.floor(arr.length / 2);
+  const left = mergeSort(arr.slice(0, middle));
+  const right = mergeSort(arr.slice(middle));
+  
+  return merge(left, right);
+}
+
+function merge(left, right) {
+  let result = [], leftIndex = 0, rightIndex = 0;
+  
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+  
+  return result.concat(left.slice(leftIndex), right.slice(rightIndex));
+}
+
+let unsortedArray = [4, 1, 3, 9, 7];
+console.log(mergeSort(unsortedArray)); // Output: [1, 3, 4, 7, 9]
+Exercise 53: Find Longest Substring Without Repeating Characters 🔑
+Description: Write a program that finds the length of the longest substring without repeating characters in a string.
+Input: A string.
+Output: The length of the longest substring without repeating characters.
+
+javascript
+Copy code
+function longestSubstring(str) {
+  let map = new Map();
+  let left = 0;
+  let maxLength = 0;
+
+  for (let right = 0; right < str.length; right++) {
+    if (map.has(str[right])) {
+      left = Math.max(left, map.get(str[right]) + 1);
+    }
+    map.set(str[right], right);
+    maxLength = Math.max(maxLength, right - left + 1);
+  }
+
+  return maxLength;
+}
+
+let input = "abcabcbb";
+console.log(longestSubstring(input)); // Output: 3 ("abc")
+Exercise 54: Find All Permutations of a String 🔀
+Description: Write a program that finds all the permutations of a given string.
+Input: A string.
+Output: An array containing all the permutations of the string.
+
+javascript
+Copy code
+function getPermutations(str) {
+  if (str.length === 0) return [''];
+  let result = [];
+  
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    let remainingChars = str.slice(0, i) + str.slice(i + 1);
+    let permutations = getPermutations(remainingChars);
+    
+    for (let perm of permutations) {
+      result.push(char + perm);
+    }
+  }
+  
+  return result;
+}
+
+let input = "abc";
+console.log(getPermutations(input)); // Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+Exercise 55: Find All Anagrams of a String 🧩
+Description: Write a program that finds all anagrams of a given string from a list of words.
+Input: A string and a list of words.
+Output: A list of anagrams of the string from the provided list.
+
+javascript
+Copy code
+function findAnagrams(str, words) {
+  let sortedStr = str.split('').sort().join('');
+  return words.filter(word => word.split('').sort().join('') === sortedStr);
+}
+
+let input = "listen";
+let wordList = ["enlist", "google", "inlets", "banana"];
+console.log(findAnagrams(input, wordList)); // Output: ['enlist', 'inlets']
+Exercise 56: Fibonacci Sequence Using Recursion 📈
+Description: Write a program that generates the Fibonacci sequence up to the n-th number using recursion.
+Input: A number n.
+Output: The Fibonacci sequence up to the n-th number.
+
+javascript
+Copy code
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+let n = 6;
+let sequence = [];
+for (let i = 0; i < n; i++) {
+  sequence.push(fibonacci(i));
+}
+
+console.log(sequence); // Output: [0, 1, 1, 2, 3, 5]
+Exercise 57: Implement Trie Data Structure 🔠
+Description: Write a program that implements a trie data structure to store strings.
+Input: A list of strings to insert into the trie.
+Output: A trie containing all the strings.
+
+javascript
+Copy code
+class TrieNode {
+  constructor() {
+    this.children = {};
+    this.isEndOfWord = false;
+  }
+}
+
+class Trie {
+  constructor() {
+    this.root = new TrieNode();
+  }
+
+  insert(word) {
+    let node = this.root;
+    for (let char of word) {
+      if (!node.children[char]) {
+        node.children[char] = new TrieNode();
+      }
+      node = node.children[char];
+    }
+    node.isEndOfWord = true;
+  }
+
+  search(word) {
+    let node = this.root;
+    for (let char of word) {
+      if (!node.children[char]) {
+        return false;
+      }
+      node = node.children[char];
+    }
+    return node.isEndOfWord;
+  }
+}
+
+let trie = new Trie();
+trie.insert("hello");
+trie.insert("world");
+console.log(trie.search("hello")); // Output: true
+console.log(trie.search("world")); // Output: true
+console.log(trie.search("hell"));  // Output: false
+Exercise 58: Implement a LRU Cache 🧳
+Description: Write a program that implements a Least Recently Used (LRU) cache.
+Input: A cache size and a list of key-value pairs to insert into the cache.
+Output: The cache state after each operation.
+
+javascript
+Copy code
+class LRUCache {
+  constructor(capacity) {
+    this.capacity = capacity;
+    this.cache = new Map();
+  }
+
+  get(key) {
+    if (!this.cache.has(key)) {
+      return -1;
+    }
+    const value = this.cache.get(key);
+    this.cache.delete(key);
+    this.cache.set(key, value);
+    return value;
+  }
+
+  put(key, value) {
+    if (this.cache.size >= this.capacity) {
+      this.cache.delete(this.cache.keys().next().value);
+    }
+    this.cache.set(key, value);
+  }
+}
+
+let cache = new LRUCache(2);
+cache.put(1, 1);
+cache.put(2, 2);
+console.log(cache.get(1)); // Output: 1
+cache.put(3, 3);
+console.log(cache.get(2)); // Output: -1 (removed due to capacity)
+Exercise 59: Dijkstra’s Shortest Path Algorithm 🛣️
+Description: Write a program that implements Dijkstra's algorithm to find the shortest path in a graph.
+Input: A weighted graph and a starting node.
+Output: The shortest path from the start node to every other node.
+
+javascript
+Copy code
+function dijkstra(graph, start) {
+  let distances = {};
+  let pq = new PriorityQueue();
+
+  for (let node in graph) {
+    distances[node] = Infinity;
+  }
+  distances[start] = 0;
+  pq.enqueue(start, 0);
+
+  while (!pq.isEmpty()) {
+    let node = pq.dequeue().element;
+
+    graph[node].forEach(neighbor => {
+      let alt = distances[node] + neighbor.weight;
+      if (alt < distances[neighbor.node]) {
+        distances[neighbor.node] = alt;
+        pq.enqueue(neighbor.node, alt);
+      }
+    });
+  }
+
+  return distances;
+}
+
+// PriorityQueue is a custom implementation for managing the queue of nodes
+
+let graph = {
+  A: [{node: 'B', weight: 1}, {node: 'C', weight: 4}],
+  B: [{node: 'A', weight: 1}, {node: 'C', weight: 2}, {node: 'D', weight: 5}],
+  C: [{node: 'A', weight: 4}, {node: 'B', weight: 2}, {node: 'D', weight: 1}],
+  D: [{node: 'B', weight: 5}, {node: 'C', weight: 1}]
+};
+
+console.log(dijkstra(graph, 'A'));
+
+
+
+💻💻💻💻💻💻💻
+
+ o create a more advanced CRUD (Create, Read, Update, Delete) application with HTML, JavaScript, and CSS, let's build a user management system that allows users to:
+
+### Add new users (Create)
+### Display a list of users (Read)
+### Edit user details (Update)
+### Delete users (Delete)
+The users will have basic details like name, email, and phone number. The application will allow the user to interact with the page directly through a simple web interface.
+
+Advanced CRUD Application with HTML, JavaScript, and CSS
+### 1. HTML (index.html): The Structure
+The HTML file will provide the structure of our web page, including the form to add new users, a table to display the users, and buttons to update or delete user details.
+
+```html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Management System</h1>
+        
+        <!-- Form to add new users -->
+        <div class="form-container">
+            <input type="text" id="name" placeholder="Enter Name" required>
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <input type="text" id="phone" placeholder="Enter Phone Number" required>
+            <button onclick="addUser()">Add User</button>
+        </div>
+
+        <h2>User List</h2>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User rows will be added here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+```
+### 2. CSS (styles.css): The Styling
+The CSS file will provide styling to make the web page look better. It will format the form, the table, and buttons.
+
+```css
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+button.edit, button.delete {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+button.edit {
+    background-color: #ff9800;
+}
+
+button.delete {
+    background-color: #f44336;
+}
+```
+### 3. JavaScript (app.js): The Logic
+The JavaScript file will contain the logic to perform CRUD operations. It will handle the actions such as adding a user, displaying the user list, editing user information, and deleting users.
+
+```javascript
+
+// Sample user data (could be stored in localStorage or a database in real scenarios)
+let users = [];
+
+// Function to add a new user
+function addUser() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+
+    // Input validation
+    if (!name || !email || !phone) {
+        alert("All fields are required!");
+        return;
+    }
+
+    // Create a new user object
+    const newUser = {
+        id: Date.now(),  // Generate unique ID using timestamp
+        name: name,
+        email: email,
+        phone: phone
+    };
+
+    // Add new user to the list
+    users.push(newUser);
+
+    // Clear input fields
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+
+    // Re-render the user list
+    renderUserList();
+}
+
+// Function to render the user list
+function renderUserList() {
+    const tableBody = document.querySelector('#userTable tbody');
+    tableBody.innerHTML = ''; // Clear the table before re-rendering
+
+    users.forEach(user => {
+        const row = document.createElement('tr');
+        
+        // Create table cells
+        row.innerHTML = `
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.phone}</td>
+            <td>
+                <button class="edit" onclick="editUser(${user.id})">Edit</button>
+                <button class="delete" onclick="deleteUser(${user.id})">Delete</button>
+            </td>
+        `;
+        tableBody.appendChild(row);
+    });
+}
+
+// Function to edit a user
+function editUser(id) {
+    const user = users.find(user => user.id === id);
+    if (user) {
+        document.getElementById('name').value = user.name;
+        document.getElementById('email').value = user.email;
+        document.getElementById('phone').value = user.phone;
+
+        // Remove the user from the list and allow updating
+        deleteUser(id);
+    }
+}
+
+// Function to delete a user
+function deleteUser(id) {
+    users = users.filter(user => user.id !== id); // Remove user with matching ID
+    renderUserList(); // Re-render the list after deletion
+}
+
+// Initial render when the page loads
+window.onload = renderUserList;
+```
+How the CRUD Application Works:
+### Create:
+
+Users can be added by filling out the form and clicking the "Add User" button. The data is stored in an array, and the table is updated to show the new user.
+### Read:
+
+The list of users is displayed in a table below the form. Each user is shown with their name, email, phone number, and actions (Edit/Delete).
+### Update:
+
+When a user clicks the "Edit" button next to a user, their information is pre-filled in the input fields. The user can update the details, and the old data is removed when they are edited.
+### Delete:
+
+-Users can be deleted by clicking the "Delete" button next to their name. This removes the user from the list.
+### Key Features of the Advanced CRUD Application:
+### Dynamic Table Rendering: 
+The list of users is dynamically updated each time a user is added, edited, or deleted.
+Input Validation: Ensures that all fields are filled before a new user is added.
+Edit and Delete: Each user can be edited or deleted individually with their respective buttons.
+Unique User IDs: Uses the timestamp (Date.now()) to generate a unique ID for each user.
+Clear Form After Adding: After submitting the form, it clears the input fields for a smoother user experience.
+### Conclusion:
+This CRUD application is a more advanced implementation of user management, combining HTML, CSS, and JavaScript to create a fully functional user management system. It allows you to add, view, edit, and delete users in a seamless and interactive way. This basic system can later be extended by adding persistence (e.g., saving users to localStorage, or integrating with a backend server).
 🎉  🏁
+
