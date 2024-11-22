@@ -877,8 +877,8 @@ Description: Write a program that checks if a given string is a palindrome (read
 Input: A string.
 Output: "Palindrome" if the string is a palindrome, otherwise "Not Palindrome."
 
-javascript
-Copy code
+```javascript
+
 let str = "racecar";
 let reversedStr = str.split("").reverse().join("");
 
@@ -886,14 +886,14 @@ if (str === reversedStr) {
   console.log("Palindrome");
 } else {
   console.log("Not Palindrome");
-}
+```
 Exercise 42: Reverse a Number 🔄
 Description: Write a program that reverses the digits of a given number.
 Input: A number.
 Output: The reversed number.
 
-javascript
-Copy code
+``` javascript
+
 let num = 12345;
 let reversedNum = num.toString().split("").reverse().join("");
 console.log("Reversed Number:", reversedNum);
@@ -912,23 +912,25 @@ for (let i = 1; i <= n; i++) {
 }
 
 console.log("Factorial:", factorial);
+```
 Exercise 44: Find Maximum in Array 🌟
 Description: Write a program that finds the maximum number in an array of numbers.
 Input: An array of numbers.
 Output: The maximum number.
 
-javascript
-Copy code
+```javascript
+
 let numbers = [3, 5, 7, 2, 8];
 let max = Math.max(...numbers);
 console.log("Maximum Number:", max);
+```
 Exercise 45: Remove First Occurrence of Element in Array ❌
 Description: Write a program that removes the first occurrence of a specified element from an array.
 Input: An array and an element to remove.
 Output: The array with the first occurrence of the element removed.
 
-javascript
-Copy code
+```javascript
+
 let arr = [1, 2, 3, 4, 5, 2];
 let element = 2;
 let index = arr.indexOf(element);
@@ -938,48 +940,52 @@ if (index !== -1) {
 }
 
 console.log("Updated Array:", arr);
+```
 Exercise 46: Merge Two Arrays 🧩
 Description: Write a program that merges two arrays into a single array.
 Input: Two arrays.
 Output: A merged array.
 
-javascript
-Copy code
+```javascript
+
 let array1 = [1, 2, 3];
 let array2 = [4, 5, 6];
 let mergedArray = array1.concat(array2);
 
 console.log("Merged Array:", mergedArray);
+```
 Exercise 47: Count the Number of Digits in a Number 🔢
 Description: Write a program that counts how many digits are in a given number.
 Input: A number.
 Output: The number of digits in the number.
 
-javascript
-Copy code
+```javascript
+
 let num = 12345;
 let digitCount = num.toString().length;
 
 console.log("Number of Digits:", digitCount);
+```
 Exercise 48: Calculate Power of a Number (Exponentiation) 💡
 Description: Write a program that calculates the power of a number base raised to the exponent exp.
 Input: A base and an exponent.
 Output: The result of base^exp.
 
-javascript
-Copy code
+```javascript
+
 let base = 2;
 let exp = 3;
 let result = Math.pow(base, exp);
 
 console.log("Result:", result);
+````
 Exercise 49: Find Second Smallest Number in Array 🔍
 Description: Write a program that finds the second smallest number in an array.
 Input: An array of numbers.
 Output: The second smallest number.
 
-javascript
-Copy code
+```javascript
+
 let numbers = [5, 3, 9, 2, 8];
 numbers.sort((a, b) => a - b); // Sort array in ascending order
 let secondSmallest = numbers[1]; // Second smallest number
@@ -1010,14 +1016,14 @@ console.log(isPrime ? "Prime" : "Not Prime");
 
 
 
-
+```
 Exercise 51: Implement Binary Search 🧐
 Description: Write a program that implements the binary search algorithm to find an element in a sorted array.
 Input: A sorted array and a target element.
 Output: The index of the element if found, otherwise -1.
 
-javascript
-Copy code
+```javascript
+
 function binarySearch(arr, target) {
   let low = 0;
   let high = arr.length - 1;
@@ -1040,13 +1046,14 @@ function binarySearch(arr, target) {
 let sortedArray = [1, 3, 5, 7, 9, 11, 13];
 let target = 7;
 console.log(binarySearch(sortedArray, target)); // Output: 3
+```
 Exercise 52: Merge Sort Algorithm 🧩
 Description: Write a program that implements the merge sort algorithm to sort an array of numbers.
 Input: An unsorted array of numbers.
 Output: A sorted array.
 
-javascript
-Copy code
+```javascript
+
 function mergeSort(arr) {
   if (arr.length <= 1) {
     return arr;
@@ -1077,13 +1084,14 @@ function merge(left, right) {
 
 let unsortedArray = [4, 1, 3, 9, 7];
 console.log(mergeSort(unsortedArray)); // Output: [1, 3, 4, 7, 9]
+````
 Exercise 53: Find Longest Substring Without Repeating Characters 🔑
 Description: Write a program that finds the length of the longest substring without repeating characters in a string.
 Input: A string.
 Output: The length of the longest substring without repeating characters.
 
-javascript
-Copy code
+```javascript
+
 function longestSubstring(str) {
   let map = new Map();
   let left = 0;
@@ -1101,14 +1109,15 @@ function longestSubstring(str) {
 }
 
 let input = "abcabcbb";
-console.log(longestSubstring(input)); // Output: 3 ("abc")
+console.log(longestSubstring(input)); // Output: 3 ("ABC")
+````
 Exercise 54: Find All Permutations of a String 🔀
 Description: Write a program that finds all the permutations of a given string.
 Input: A string.
 Output: An array containing all the permutations of the string.
 
-javascript
-Copy code
+``` javascript
+
 function getPermutations(str) {
   if (str.length === 0) return [''];
   let result = [];
@@ -1128,13 +1137,14 @@ function getPermutations(str) {
 
 let input = "abc";
 console.log(getPermutations(input)); // Output: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
+```
 Exercise 55: Find All Anagrams of a String 🧩
 Description: Write a program that finds all anagrams of a given string from a list of words.
 Input: A string and a list of words.
 Output: A list of anagrams of the string from the provided list.
 
-javascript
-Copy code
+``` javascript
+
 function findAnagrams(str, words) {
   let sortedStr = str.split('').sort().join('');
   return words.filter(word => word.split('').sort().join('') === sortedStr);
@@ -1143,13 +1153,14 @@ function findAnagrams(str, words) {
 let input = "listen";
 let wordList = ["enlist", "google", "inlets", "banana"];
 console.log(findAnagrams(input, wordList)); // Output: ['enlist', 'inlets']
+````
 Exercise 56: Fibonacci Sequence Using Recursion 📈
 Description: Write a program that generates the Fibonacci sequence up to the n-th number using recursion.
 Input: A number n.
 Output: The Fibonacci sequence up to the n-th number.
 
-javascript
-Copy code
+```javascript
+
 function fibonacci(n) {
   if (n <= 1) return n;
   return fibonacci(n - 1) + fibonacci(n - 2);
@@ -1162,13 +1173,14 @@ for (let i = 0; i < n; i++) {
 }
 
 console.log(sequence); // Output: [0, 1, 1, 2, 3, 5]
+````
 Exercise 57: Implement Trie Data Structure 🔠
 Description: Write a program that implements a trie data structure to store strings.
 Input: A list of strings to insert into the trie.
 Output: A trie containing all the strings.
 
-javascript
-Copy code
+```javascript
+
 class TrieNode {
   constructor() {
     this.children = {};
@@ -1210,13 +1222,14 @@ trie.insert("world");
 console.log(trie.search("hello")); // Output: true
 console.log(trie.search("world")); // Output: true
 console.log(trie.search("hell"));  // Output: false
+```
 Exercise 58: Implement a LRU Cache 🧳
 Description: Write a program that implements a Least Recently Used (LRU) cache.
 Input: A cache size and a list of key-value pairs to insert into the cache.
 Output: The cache state after each operation.
 
-javascript
-Copy code
+```javascript
+
 class LRUCache {
   constructor(capacity) {
     this.capacity = capacity;
@@ -1247,13 +1260,14 @@ cache.put(2, 2);
 console.log(cache.get(1)); // Output: 1
 cache.put(3, 3);
 console.log(cache.get(2)); // Output: -1 (removed due to capacity)
+````
 Exercise 59: Dijkstra’s Shortest Path Algorithm 🛣️
 Description: Write a program that implements Dijkstra's algorithm to find the shortest path in a graph.
 Input: A weighted graph and a starting node.
 Output: The shortest path from the start node to every other node.
 
-javascript
-Copy code
+```javascript
+
 function dijkstra(graph, start) {
   let distances = {};
   let pq = new PriorityQueue();
@@ -1290,11 +1304,10 @@ let graph = {
 
 console.log(dijkstra(graph, 'A'));
 
+```
 
-
-💻💻💻💻💻💻💻
-
- o create a more advanced CRUD (Create, Read, Update, Delete) application with HTML, JavaScript, and CSS, let's build a user management system that allows users to:
+# 💻💻💻💻💻💻💻
+# create a more advanced CRUD (Create, Read, Update, Delete) application with HTML, JavaScript, and CSS, let's build a user management system that allows users to:
 
 ### Add new users (Create)
 ### Display a list of users (Read)
